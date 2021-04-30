@@ -53,11 +53,15 @@ def is_conv2d(module):
     return module.__class__.__name__ == "Conv2d"
 
 
+def is_transposed_conv2d(module):
+    return module.__class__.__name__ == "ConvTranspose2d"
+
+
 def is_TCBR(module):
     return module.__class__.__name__ == "TCBR"
 
 
-class Encoder4VGG16(nn.Module):
+class DeconvNetEncoder4VGG16(nn.Module):
     def __init__(self, backbone, return_indices=True):
         super().__init__()
         self.backbone = backbone
@@ -82,7 +86,7 @@ class Encoder4VGG16(nn.Module):
                 module.return_indices = True
 
 
-class Decoder4VGG16(nn.Module):
+class DeconvNetDecoder4VGG16(nn.Module):
     def __init__(self, backbone):
         super().__init__()
         self.features = self._make_module(backbone)
@@ -118,7 +122,7 @@ class DeconvNet4VGG16(nn.Module):
     def __init__(self, classes=12):
         super().__init__()
         vgg16 = models.vgg16_bn(True)
-        self.encoder = Encoder4VGG16(vgg16.features)
+        self.encoder = DeconvNetEncoder4VGG16(vgg16.features)
         self.fcn = nn.Sequential(
             CBR(512, 1024, 7, 1, 0),
             nn.Dropout(0.5),
@@ -126,7 +130,7 @@ class DeconvNet4VGG16(nn.Module):
             nn.Dropout(0.5),
             TCBR(1024, 512, 7, 1, 0)
         )
-        self.decoder = Decoder4VGG16(vgg16.features)
+        self.decoder = DeconvNetDecoder4VGG16(vgg16.features)
         self.classifier = nn.Conv2d(64, classes, 1)
 
     def forward(self, x):
@@ -136,15 +140,120 @@ class DeconvNet4VGG16(nn.Module):
         return self.classifier(x)
 
 
+class UNetEncoder4VGG16(nn.Module):
+    def __init__(self, backbone):
+        super().__init__()
+        self.features = self._make_module(backbone)
+
+    def _make_module(self, backbone):
+        modules = []
+        _buffer = []
+        for idx, module in enumerate(backbone.children(), 1):
+            if is_maxpool(module):
+                modules.extend([nn.Sequential(*_buffer),
+                                nn.MaxPool2d(module.kernel_size)])
+                _buffer = []
+            else:
+                _buffer.append(module)
+        return nn.Sequential(*modules)
+
+    def forward(self, x):
+        intermediate_outputs = []
+        for module in self.features.children():
+            x = module(x)
+            if is_maxpool(module):
+                continue
+            intermediate_outputs.append(x)
+        return x, intermediate_outputs
+
+
+class UNetDecoder4VGG16(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.features = nn.Sequential(
+            nn.ConvTranspose2d(512, 512, 2, 2, 0),
+            nn.Sequential(
+                CBR(1024, 512, 3, 1, 1),
+                CBR(512, 512, 3, 1, 1),
+                CBR(512, 512, 3, 1, 1)
+            ),
+            nn.ConvTranspose2d(512, 512, 2, 2, 0),
+            nn.Sequential(
+                CBR(1024, 512, 3, 1, 1),
+                CBR(512, 512, 3, 1, 1),
+                CBR(512, 256, 3, 1, 1)
+            ),
+            nn.ConvTranspose2d(256, 256, 2, 2, 0),
+            nn.Sequential(
+                CBR(512, 256, 3, 1, 1),
+                CBR(256, 256, 3, 1, 1),
+                CBR(256, 128, 3, 1, 1)
+            ),
+            nn.ConvTranspose2d(128, 128, 2, 2, 0),
+            nn.Sequential(
+                CBR(256, 128, 3, 1, 1),
+                CBR(128, 64, 3, 1, 1)
+            ),
+            nn.ConvTranspose2d(64, 64, 2, 2, 0),
+            nn.Sequential(
+                CBR(128, 64, 3, 1, 1)
+            )
+        )
+
+    def forward(self, x, intermediate_outputs):
+        for module in self.features.children():
+            if is_transposed_conv2d(module):
+                x = module(x)
+            else:
+                x = torch.cat((x, intermediate_outputs.pop()), 1)
+                x = module(x)
+        return x
+
+
+class _UNet(nn.Module):
+    def __init__(self, encoder, fcn, decoder, classifier):
+        super().__init__()
+        self.encoder = encoder
+        self.fcn = fcn
+        self.decoder = decoder
+        self.classifier = classifier
+
+    def forward(self, x):
+        outputs, intermediate_outputs = self.encoder(x)
+        outputs = self.fcn(outputs)
+        outputs = self.decoder(outputs, intermediate_outputs)
+        return self.classifier(outputs)
+
+
+class UNet4VGG16(_UNet):
+    def __init__(self, classes=12):
+        vgg16 = models.vgg16_bn()
+        encoder = UNetEncoder4VGG16(vgg16.features)
+        fcn = nn.Sequential(
+            CBR(512, 1024, 3, 1, 1),
+            nn.Dropout(0.5),
+            CBR(1024, 1024, 1, 1, 0),
+            nn.Dropout(0.5),
+            CBR(1024, 512, 3, 1, 1),
+            nn.Dropout(0.5)
+        )
+        decoder = UNetDecoder4VGG16()
+        classifier = nn.Conv2d(64, classes, 1, 1, 0)
+        super(UNet4VGG16, self).__init__(encoder, fcn, decoder, classifier)
+
+
 def get_model(name):
     if name == "DeconvNet4VGG16":
         return DeconvNet4VGG16()
+    if name == "UNet4VGG16":
+        return UNet4VGG16()
     raise ValueError("incorrect model name: %s" % name)
 
 
 if __name__ == '__main__':
-    model = get_model("DeconvNet4VGG16")
-    print(model, "\n")
-    inputs = torch.rand(1, 3, 512, 512)
-    outputs = model(inputs)
-    print(outputs.shape)
+    model = get_model("UNet4VGG16")
+    print(model)
+    # model.cuda()
+    arr = torch.rand(1, 3, 512, 512)
+    output = model(arr)
+    print(output.shape)

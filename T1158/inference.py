@@ -5,7 +5,7 @@ import pandas as pd
 import torch
 import albumentations as A
 
-from params import PARAMS
+from T1158.params import PARAMS
 
 
 @torch.no_grad()

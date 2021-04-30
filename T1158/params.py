@@ -1,9 +1,9 @@
 PARAMS = {
     "project": "semantic-segmentation",
-    "group": "DeconvNet4VGG16",
-    "job_type": "v2",
+    "group": "UNet4VGG16",
+    "job_type": "v1",
     "config": {
-        "model": "DeconvNet4VGG16",
+        "model": "UNet4VGG16",
         "epoch": 20,
         "batch_size": 16,
         "lr": 3e-4,

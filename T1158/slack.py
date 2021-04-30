@@ -5,7 +5,7 @@ from datetime import datetime
 
 from pytz import timezone
 
-from webhook_url import url
+from T1158.webhook_url import url
 
 
 def alert(func):

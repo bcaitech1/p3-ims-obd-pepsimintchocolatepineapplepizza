@@ -18,12 +18,9 @@ def train(model, optimizer, criterion, epoch, train_loader,
             loss.backward()
             optimizer.step()
             if logger is not None and step % 20 == 0:
-                hist = np.zeros((CLASSES, CLASSES))
                 label_trues = masks.detach().cpu().numpy()
                 label_preds = outputs.argmax(1).detach().cpu().numpy()
-                for lt, lp in zip(label_trues, label_preds):
-                    hist += add_hist(lt.flatten(), lp.flatten())
-                acc, _, mean_iu = label_accuracy_score(hist)
+                acc, _, mean_iu = label_accuracy_score(label_trues, label_preds)
                 val_loss, val_acc, _, val_mean_iu = evaluate(model, criterion, val_loader)
                 logger.log({
                     "epoch": i,
@@ -38,14 +35,14 @@ def train(model, optimizer, criterion, epoch, train_loader,
     return
 
 
-def add_hist(label_true, label_pred):
-    mask = (label_true >= 0) & (label_true < CLASSES)
+def get_hist(label_true, label_pred):
+    mask = (label_true >= 0) & (label_true < CLASSES)  # filtering incorrect label
     return np.bincount(
         CLASSES * label_true[mask].astype(int) + label_pred[mask],
         minlength=CLASSES ** 2).reshape(CLASSES, CLASSES)
 
 
-def label_accuracy_score(hist):
+def get_metric(hist):
     acc = np.diag(hist).sum() / hist.sum()
     with np.errstate(divide='ignore', invalid='ignore'):
         mean_precision = np.diag(hist) / hist.sum(axis=1)
@@ -58,11 +55,23 @@ def label_accuracy_score(hist):
     return acc, mean_precision, mean_iu
 
 
+def label_accuracy_score(label_trues, label_preds):
+    acc, mean_precision, mean_iu = 0, 0, 0
+    length = len(label_trues)
+    for lt, lp in zip(label_trues, label_preds):
+        hist = get_hist(lt.flatten(), lp.flatten())
+        _acc, _mean_precision, _mean_iu = get_metric(hist)
+        acc += _acc
+        mean_precision += _mean_precision
+        mean_iu += _mean_iu
+    return acc / length, mean_precision / length, mean_iu / length
+
+
 @torch.no_grad()
 def evaluate(model, criterion, val_loader):
     val_loss = 0
+    acc, mean_precision, mean_iu = 0, 0, 0
     step = 0
-    hist = np.zeros((CLASSES, CLASSES))
     model.eval()
     for inputs in val_loader:
         inputs = {key: val.cuda() for key, val in inputs.items()}
@@ -72,8 +81,10 @@ def evaluate(model, criterion, val_loader):
         val_loss += loss.item() * len(masks)
         label_preds = outputs.argmax(1).detach().cpu().numpy()
         label_trues = masks.detach().cpu().numpy()
-        for lt, lp in zip(label_trues, label_preds):
-            hist += add_hist(lt.flatten(), lp.flatten())
-        step += len(masks)
-    acc, mean_precision, mean_iu = label_accuracy_score(hist)
-    return val_loss / step, acc, mean_precision, mean_iu
+        _acc, _mean_precision, _mean_iu = label_accuracy_score(label_trues, label_preds)
+        length = len(masks)
+        acc += _acc * length
+        mean_precision += _mean_precision * length
+        mean_iu += _mean_iu * length
+        step += length
+    return val_loss / step, acc / step, mean_precision / step, mean_iu / step

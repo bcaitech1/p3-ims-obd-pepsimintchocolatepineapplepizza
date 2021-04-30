@@ -8,12 +8,12 @@ from torch.utils.data import DataLoader
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
-from model import get_model
-from dataset import ImageDataset, TestDataset
-from train import train
-from inference import inference
-from slack import alert
-from params import PARAMS, FILE_PATHS
+from T1158.model import get_model
+from T1158.dataset import ImageDataset, TestDataset
+from T1158.train import train
+from T1158.inference import inference
+from T1158.slack import alert
+from T1158.params import PARAMS, FILE_PATHS
 
 
 def fix_random_state(random_seed=1818):
