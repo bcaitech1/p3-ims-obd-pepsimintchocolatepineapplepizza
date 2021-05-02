@@ -50,5 +50,5 @@ class TestDataset(_ImageDataset):
     def __getitem__(self, index: int):
         img, image_infos = super().__getitem__(index)
         if self.transform is not None:
-            return self.transform(image=img, file_name=image_infos["file_name"])
+            return self.transform(image=img, file_name=image_infos["file_name"], mask=img)
         return {"image": img, "file_name": image_infos["file_name"]}

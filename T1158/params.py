@@ -1,22 +1,17 @@
 PARAMS = {
     "project": "semantic-segmentation",
-    "group": "UNet4VGG16",
+    "group": "DeepLabV1VGG16",
     "job_type": "v1",
     "config": {
-        "model": "UNet4VGG16",
-        "epoch": 20,
-        "batch_size": 16,
-        "lr": 3e-4,
-        "f-lr": 3e-5,
+        "model": "DeepLabV1VGG16",
+        "epoch": 100,
+        "batch_size": 64,
+        "lr": 3e-3,
+        "f-lr": 3e-3,
         "criterion": "ce",
         "optimizer": "adam",
-        "num_workers": 4,
+        "CRF": True,
+        # "scheduler": "cosine",
+        "num_workers": 4
     }
-}
-
-FILE_PATHS = {
-    "train_file": "/opt/ml/input/data/train.json",
-    "val_file": "/opt/ml/input/data/val.json",
-    "all_train_file": "/opt/ml/input/data/train_all.json",
-    "test_file": "/opt/ml/input/data/test.json"
 }

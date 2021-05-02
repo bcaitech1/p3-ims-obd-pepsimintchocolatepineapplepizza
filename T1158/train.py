@@ -1,22 +1,38 @@
 import numpy as np
 import torch
+from torch.optim.lr_scheduler import ExponentialLR, CosineAnnealingWarmRestarts
+from warmup_scheduler import GradualWarmupScheduler
 
 CLASSES = 12
 
 
-def train(model, optimizer, criterion, epoch, train_loader,
+def get_scheduler(optimizer, name):
+    if name == "gradual_warmup":
+        exp_lr = ExponentialLR(optimizer, gamma=0.996)
+        return GradualWarmupScheduler(optimizer,
+                                      multiplier=1,
+                                      total_epoch=800,
+                                      after_scheduler=exp_lr)
+    if name == "cosine":
+        return CosineAnnealingWarmRestarts(optimizer, 100, 2)
+    raise ValueError("incorrect scheduler name: %s" % name)
+
+
+def train(model, optimizer, criterion, train_loader, epoch,
           val_loader=None, logger=None):
     step = 1
+    # scheduler = get_scheduler(optimizer, "cosine")
     for i in range(epoch):
         for inputs in train_loader:
             model.train()
             optimizer.zero_grad()
             inputs = {key: val.cuda() for key, val in inputs.items()}
-            masks = inputs.pop("mask")
+            masks = inputs.pop("mask").long()
             outputs = model(inputs["image"])
             loss = criterion(outputs, masks)
             loss.backward()
             optimizer.step()
+            # scheduler.step()
             if logger is not None and step % 20 == 0:
                 label_trues = masks.detach().cpu().numpy()
                 label_preds = outputs.argmax(1).detach().cpu().numpy()
@@ -29,7 +45,8 @@ def train(model, optimizer, criterion, epoch, train_loader,
                     "train_miou": mean_iu,
                     "val_loss": val_loss,
                     "val_acc": val_acc,
-                    "val_miou": val_mean_iu
+                    "val_miou": val_mean_iu,
+                    # "lr": optimizer.param_groups[0]['lr']
                 }, step=step)
             step += 1
     return
@@ -75,7 +92,7 @@ def evaluate(model, criterion, val_loader):
     model.eval()
     for inputs in val_loader:
         inputs = {key: val.cuda() for key, val in inputs.items()}
-        masks = inputs.pop("mask")
+        masks = inputs.pop("mask").long()
         outputs = model(inputs["image"])
         loss = criterion(outputs, masks)
         val_loss += loss.item() * len(masks)

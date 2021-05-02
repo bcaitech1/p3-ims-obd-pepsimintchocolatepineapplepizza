@@ -7,10 +7,11 @@ class CBR(nn.Module):
     """Convolution + BN + Relu"""
 
     def __init__(self, in_channels, out_channels,
-                 kernel_size, stride, padding):
+                 kernel_size, stride, padding, dilation=1):
         super().__init__()
         self.conv = nn.Conv2d(in_channels, out_channels,
-                              kernel_size, stride, padding)
+                              kernel_size, stride, padding,
+                              dilation=dilation)
         self.bn = nn.BatchNorm2d(out_channels)
         self.relu = nn.ReLU(True)
 
@@ -227,7 +228,7 @@ class _UNet(nn.Module):
 
 class UNet4VGG16(_UNet):
     def __init__(self, classes=12):
-        vgg16 = models.vgg16_bn()
+        vgg16 = models.vgg16_bn(True)
         encoder = UNetEncoder4VGG16(vgg16.features)
         fcn = nn.Sequential(
             CBR(512, 1024, 3, 1, 1),
@@ -242,18 +243,68 @@ class UNet4VGG16(_UNet):
         super(UNet4VGG16, self).__init__(encoder, fcn, decoder, classifier)
 
 
+class DeepLabV1VGG16(nn.Module):
+    def __init__(self, classes=12):
+        super(DeepLabV1VGG16, self).__init__()
+        vgg16 = models.vgg16_bn(True)
+        self.modify_last_conv(vgg16.features)
+        self.modify_max_pool(vgg16.features)
+        self.encoder = vgg16.features
+        self.encoder.add_module("avg_pool", nn.AvgPool2d(3, 1, 1))
+        self.fcn = nn.Sequential(
+            CBR(512, 1024, 3, 1, 12, 12),
+            nn.Dropout(0.5),
+            CBR(1024, 1024, 1, 1, 0),
+            nn.Dropout(0.5),
+            CBR(1024, classes, 1, 1, 0)
+        )
+        self.classifier = nn.UpsamplingBilinear2d(256)
+
+    def modify_last_conv(self, encoder):
+        """last 3 convolution layers modify padding, dilation"""
+        n_last_conv = 3
+        modules = [*encoder.children()][::-1]
+        for module in modules:
+            if n_last_conv > 0 and is_conv2d(module):
+                n_last_conv -= 1
+                module.padding = (2, 2)
+                module.dilation = (2, 2)
+        return
+
+    def modify_max_pool(self, encoder):
+        """max pool kernel_size 2 -> 3, stride 2 -> 1, add padding=1"""
+        # config = [(kernel_size, stride, padding),...]
+        config = [(3, 2, 1), (3, 2, 1), (3, 2, 1), (3, 1, 1), (3, 1, 1)]
+        idx = 0
+        for module in encoder.children():
+            if is_maxpool(module):
+                kernel_size, stride, padding = config[idx]
+                module.kernel_size = (kernel_size, kernel_size)
+                module.stride = (stride, stride)
+                module.padding = (padding, padding)
+                idx += 1
+        return
+
+    def forward(self, x):
+        x = self.encoder(x)
+        x = self.fcn(x)
+        return self.classifier(x)
+
+
 def get_model(name):
     if name == "DeconvNet4VGG16":
         return DeconvNet4VGG16()
     if name == "UNet4VGG16":
         return UNet4VGG16()
+    if name == "DeepLabV1VGG16":
+        return DeepLabV1VGG16()
     raise ValueError("incorrect model name: %s" % name)
 
 
 if __name__ == '__main__':
-    model = get_model("UNet4VGG16")
+    model = get_model("DeepLabV1VGG16")
     print(model)
     # model.cuda()
-    arr = torch.rand(1, 3, 512, 512)
+    arr = torch.rand(1, 3, 256, 256)
     output = model(arr)
     print(output.shape)
