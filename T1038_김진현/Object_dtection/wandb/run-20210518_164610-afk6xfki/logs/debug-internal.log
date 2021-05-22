@@ -1,0 +1,67 @@
+2021-05-18 16:46:11,784 INFO    MainThread:14638 [internal.py:wandb_internal():91] W&B internal server running at pid: 14638, started at: 2021-05-18 16:46:11.784446
+2021-05-18 16:46:11,788 DEBUG   SenderThread:14638 [sender.py:send():176] send: header
+2021-05-18 16:46:11,788 INFO    WriterThread:14638 [datastore.py:open_for_write():77] open: /opt/ml/code/mmdetection_trash/wandb/run-20210518_164610-afk6xfki/run-afk6xfki.wandb
+2021-05-18 16:46:11,788 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: check_version
+2021-05-18 16:46:11,788 DEBUG   SenderThread:14638 [sender.py:send_request():186] send_request: check_version
+2021-05-18 16:46:11,951 DEBUG   SenderThread:14638 [sender.py:send():176] send: run
+2021-05-18 16:46:12,190 INFO    SenderThread:14638 [dir_watcher.py:__init__():168] watching files in: /opt/ml/code/mmdetection_trash/wandb/run-20210518_164610-afk6xfki/files
+2021-05-18 16:46:12,190 INFO    SenderThread:14638 [sender.py:_start_run_threads():699] run started: afk6xfki with start time 1621356371
+2021-05-18 16:46:12,190 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: run_start
+2021-05-18 16:46:12,193 DEBUG   SenderThread:14638 [sender.py:send():176] send: summary
+2021-05-18 16:46:12,194 DEBUG   HandlerThread:14638 [meta.py:__init__():39] meta init
+2021-05-18 16:46:12,194 DEBUG   HandlerThread:14638 [meta.py:__init__():53] meta init done
+2021-05-18 16:46:12,194 DEBUG   HandlerThread:14638 [meta.py:probe():210] probe
+2021-05-18 16:46:12,194 INFO    SenderThread:14638 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 16:46:12,202 DEBUG   HandlerThread:14638 [meta.py:_setup_git():200] setup git
+2021-05-18 16:46:12,218 DEBUG   HandlerThread:14638 [meta.py:_setup_git():207] setup git done
+2021-05-18 16:46:12,219 DEBUG   HandlerThread:14638 [meta.py:_save_pip():57] save pip
+2021-05-18 16:46:12,219 DEBUG   HandlerThread:14638 [meta.py:_save_pip():71] save pip done
+2021-05-18 16:46:12,219 DEBUG   HandlerThread:14638 [meta.py:_save_conda():78] save conda
+2021-05-18 16:46:13,192 INFO    Thread-8  :14638 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_164610-afk6xfki/files/wandb-summary.json
+2021-05-18 16:46:13,192 INFO    Thread-8  :14638 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_164610-afk6xfki/files/requirements.txt
+2021-05-18 16:46:13,192 INFO    Thread-8  :14638 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_164610-afk6xfki/files/conda-environment.yaml
+2021-05-18 16:46:17,156 DEBUG   HandlerThread:14638 [meta.py:_save_conda():86] save conda done
+2021-05-18 16:46:17,156 DEBUG   HandlerThread:14638 [meta.py:probe():252] probe done
+2021-05-18 16:46:17,193 INFO    Thread-8  :14638 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_164610-afk6xfki/files/conda-environment.yaml
+2021-05-18 16:46:17,193 INFO    Thread-8  :14638 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_164610-afk6xfki/files/wandb-metadata.json
+2021-05-18 16:46:17,236 DEBUG   SenderThread:14638 [sender.py:send():176] send: files
+2021-05-18 16:46:17,236 INFO    SenderThread:14638 [sender.py:_save_file():821] saving file wandb-metadata.json with policy now
+2021-05-18 16:46:17,237 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 16:46:17,237 DEBUG   SenderThread:14638 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 16:46:17,887 INFO    Thread-11 :14638 [upload_job.py:push():133] Uploaded file /tmp/tmpih3i8ojbwandb/283q2mjb-wandb-metadata.json
+2021-05-18 16:46:18,193 INFO    Thread-8  :14638 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_164610-afk6xfki/files/output.log
+2021-05-18 16:46:32,426 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 16:46:32,426 DEBUG   SenderThread:14638 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 16:46:39,632 DEBUG   SenderThread:14638 [sender.py:send():176] send: history
+2021-05-18 16:46:39,632 DEBUG   SenderThread:14638 [sender.py:send():176] send: summary
+2021-05-18 16:46:39,633 INFO    SenderThread:14638 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 16:46:40,203 INFO    Thread-8  :14638 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_164610-afk6xfki/files/wandb-summary.json
+2021-05-18 16:46:40,337 DEBUG   SenderThread:14638 [sender.py:send():176] send: stats
+2021-05-18 16:46:47,612 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 16:46:47,613 DEBUG   SenderThread:14638 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 16:46:59,130 DEBUG   SenderThread:14638 [sender.py:send():176] send: history
+2021-05-18 16:46:59,130 DEBUG   SenderThread:14638 [sender.py:send():176] send: summary
+2021-05-18 16:46:59,131 INFO    SenderThread:14638 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 16:46:59,212 INFO    Thread-8  :14638 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_164610-afk6xfki/files/wandb-summary.json
+2021-05-18 16:47:02,805 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 16:47:02,806 DEBUG   SenderThread:14638 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 16:47:06,414 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: pause
+2021-05-18 16:47:06,414 INFO    HandlerThread:14638 [handler.py:handle_request_pause():519] stopping system metrics thread
+2021-05-18 16:47:06,458 DEBUG   SenderThread:14638 [sender.py:send():176] send: stats
+2021-05-18 16:47:17,992 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 16:47:17,992 DEBUG   SenderThread:14638 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 16:47:33,176 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 16:47:33,177 DEBUG   SenderThread:14638 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 16:47:48,370 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 16:47:48,370 DEBUG   SenderThread:14638 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 16:48:03,557 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 16:48:03,558 DEBUG   SenderThread:14638 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 16:48:18,748 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 16:48:18,748 DEBUG   SenderThread:14638 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 16:48:33,389 WARNING MainThread:14638 [internal.py:wandb_internal():147] Internal process interrupt: 1
+2021-05-18 16:48:33,942 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 16:48:33,942 DEBUG   SenderThread:14638 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 16:48:49,132 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 16:48:49,132 DEBUG   SenderThread:14638 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 16:49:04,331 DEBUG   HandlerThread:14638 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 16:49:04,331 DEBUG   SenderThread:14638 [sender.py:send_request():186] send_request: stop_status

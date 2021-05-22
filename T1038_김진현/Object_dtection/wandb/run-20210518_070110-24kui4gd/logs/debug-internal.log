@@ -1,0 +1,69 @@
+2021-05-18 07:01:11,146 INFO    MainThread:12743 [internal.py:wandb_internal():91] W&B internal server running at pid: 12743, started at: 2021-05-18 07:01:11.146413
+2021-05-18 07:01:11,149 DEBUG   SenderThread:12743 [sender.py:send():176] send: header
+2021-05-18 07:01:11,150 INFO    WriterThread:12743 [datastore.py:open_for_write():77] open: /opt/ml/code/mmdetection_trash/wandb/run-20210518_070110-24kui4gd/run-24kui4gd.wandb
+2021-05-18 07:01:11,150 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: check_version
+2021-05-18 07:01:11,150 DEBUG   SenderThread:12743 [sender.py:send_request():186] send_request: check_version
+2021-05-18 07:01:11,327 DEBUG   SenderThread:12743 [sender.py:send():176] send: run
+2021-05-18 07:01:12,323 INFO    SenderThread:12743 [dir_watcher.py:__init__():168] watching files in: /opt/ml/code/mmdetection_trash/wandb/run-20210518_070110-24kui4gd/files
+2021-05-18 07:01:12,323 INFO    SenderThread:12743 [sender.py:_start_run_threads():699] run started: 24kui4gd with start time 1621321270
+2021-05-18 07:01:12,323 DEBUG   SenderThread:12743 [sender.py:send():176] send: summary
+2021-05-18 07:01:12,323 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: run_start
+2021-05-18 07:01:12,324 INFO    SenderThread:12743 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 07:01:12,329 DEBUG   HandlerThread:12743 [meta.py:__init__():39] meta init
+2021-05-18 07:01:12,329 DEBUG   HandlerThread:12743 [meta.py:__init__():53] meta init done
+2021-05-18 07:01:12,329 DEBUG   HandlerThread:12743 [meta.py:probe():210] probe
+2021-05-18 07:01:12,336 DEBUG   HandlerThread:12743 [meta.py:_setup_git():200] setup git
+2021-05-18 07:01:12,353 DEBUG   HandlerThread:12743 [meta.py:_setup_git():207] setup git done
+2021-05-18 07:01:12,353 DEBUG   HandlerThread:12743 [meta.py:_save_pip():57] save pip
+2021-05-18 07:01:12,353 DEBUG   HandlerThread:12743 [meta.py:_save_pip():71] save pip done
+2021-05-18 07:01:12,354 DEBUG   HandlerThread:12743 [meta.py:_save_conda():78] save conda
+2021-05-18 07:01:13,324 INFO    Thread-8  :12743 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_070110-24kui4gd/files/wandb-summary.json
+2021-05-18 07:01:13,325 INFO    Thread-8  :12743 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_070110-24kui4gd/files/requirements.txt
+2021-05-18 07:01:13,325 INFO    Thread-8  :12743 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_070110-24kui4gd/files/conda-environment.yaml
+2021-05-18 07:01:17,087 DEBUG   HandlerThread:12743 [meta.py:_save_conda():86] save conda done
+2021-05-18 07:01:17,087 DEBUG   HandlerThread:12743 [meta.py:probe():252] probe done
+2021-05-18 07:01:17,090 DEBUG   SenderThread:12743 [sender.py:send():176] send: files
+2021-05-18 07:01:17,090 INFO    SenderThread:12743 [sender.py:_save_file():821] saving file wandb-metadata.json with policy now
+2021-05-18 07:01:17,097 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 07:01:17,098 DEBUG   SenderThread:12743 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 07:01:17,183 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: pause
+2021-05-18 07:01:17,183 INFO    HandlerThread:12743 [handler.py:handle_request_pause():519] stopping system metrics thread
+2021-05-18 07:01:17,277 DEBUG   SenderThread:12743 [sender.py:send():176] send: stats
+2021-05-18 07:01:17,324 INFO    Thread-8  :12743 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_070110-24kui4gd/files/conda-environment.yaml
+2021-05-18 07:01:17,324 INFO    Thread-8  :12743 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_070110-24kui4gd/files/output.log
+2021-05-18 07:01:17,324 INFO    Thread-8  :12743 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_070110-24kui4gd/files/wandb-metadata.json
+2021-05-18 07:01:17,721 INFO    Thread-11 :12743 [upload_job.py:push():133] Uploaded file /tmp/tmp3y21xcs1wandb/ks9yzk8a-wandb-metadata.json
+2021-05-18 07:01:32,279 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 07:01:32,279 DEBUG   SenderThread:12743 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 07:01:32,655 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: resume
+2021-05-18 07:01:32,655 INFO    HandlerThread:12743 [handler.py:handle_request_resume():514] starting system metrics thread
+2021-05-18 07:01:32,656 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: pause
+2021-05-18 07:01:32,656 INFO    HandlerThread:12743 [handler.py:handle_request_pause():519] stopping system metrics thread
+2021-05-18 07:01:32,668 DEBUG   SenderThread:12743 [sender.py:send():176] send: stats
+2021-05-18 07:01:37,868 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: resume
+2021-05-18 07:01:37,868 INFO    HandlerThread:12743 [handler.py:handle_request_resume():514] starting system metrics thread
+2021-05-18 07:01:37,869 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: pause
+2021-05-18 07:01:37,871 INFO    HandlerThread:12743 [handler.py:handle_request_pause():519] stopping system metrics thread
+2021-05-18 07:01:37,878 DEBUG   SenderThread:12743 [sender.py:send():176] send: stats
+2021-05-18 07:01:47,466 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 07:01:47,467 DEBUG   SenderThread:12743 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 07:01:51,612 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: resume
+2021-05-18 07:01:51,612 INFO    HandlerThread:12743 [handler.py:handle_request_resume():514] starting system metrics thread
+2021-05-18 07:01:51,615 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: pause
+2021-05-18 07:01:51,616 INFO    HandlerThread:12743 [handler.py:handle_request_pause():519] stopping system metrics thread
+2021-05-18 07:01:51,624 DEBUG   SenderThread:12743 [sender.py:send():176] send: stats
+2021-05-18 07:02:02,644 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 07:02:02,644 DEBUG   SenderThread:12743 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 07:02:17,826 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 07:02:17,826 DEBUG   SenderThread:12743 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 07:02:33,007 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 07:02:33,007 DEBUG   SenderThread:12743 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 07:02:48,231 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 07:02:48,231 DEBUG   SenderThread:12743 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 07:03:03,490 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 07:03:03,491 DEBUG   SenderThread:12743 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 07:03:06,812 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: resume
+2021-05-18 07:03:06,812 INFO    HandlerThread:12743 [handler.py:handle_request_resume():514] starting system metrics thread
+2021-05-18 07:03:06,815 DEBUG   HandlerThread:12743 [handler.py:handle_request():121] handle_request: pause
+2021-05-18 07:03:06,815 INFO    HandlerThread:12743 [handler.py:handle_request_pause():519] stopping system metrics thread
+2021-05-18 07:03:06,824 DEBUG   SenderThread:12743 [sender.py:send():176] send: stats

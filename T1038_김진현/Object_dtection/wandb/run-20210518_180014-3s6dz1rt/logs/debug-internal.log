@@ -1,0 +1,187 @@
+2021-05-18 18:00:14,894 INFO    MainThread:23072 [internal.py:wandb_internal():91] W&B internal server running at pid: 23072, started at: 2021-05-18 18:00:14.894068
+2021-05-18 18:00:14,898 DEBUG   SenderThread:23072 [sender.py:send():176] send: header
+2021-05-18 18:00:14,898 INFO    WriterThread:23072 [datastore.py:open_for_write():77] open: /opt/ml/code/mmdetection_trash/wandb/run-20210518_180014-3s6dz1rt/run-3s6dz1rt.wandb
+2021-05-18 18:00:14,899 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: check_version
+2021-05-18 18:00:14,899 DEBUG   SenderThread:23072 [sender.py:send_request():186] send_request: check_version
+2021-05-18 18:00:15,056 DEBUG   SenderThread:23072 [sender.py:send():176] send: run
+2021-05-18 18:00:15,321 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: run_start
+2021-05-18 18:00:15,323 INFO    SenderThread:23072 [dir_watcher.py:__init__():168] watching files in: /opt/ml/code/mmdetection_trash/wandb/run-20210518_180014-3s6dz1rt/files
+2021-05-18 18:00:15,323 INFO    SenderThread:23072 [sender.py:_start_run_threads():699] run started: 3s6dz1rt with start time 1621360814
+2021-05-18 18:00:15,324 DEBUG   SenderThread:23072 [sender.py:send():176] send: summary
+2021-05-18 18:00:15,324 INFO    SenderThread:23072 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 18:00:15,329 DEBUG   HandlerThread:23072 [meta.py:__init__():39] meta init
+2021-05-18 18:00:15,329 DEBUG   HandlerThread:23072 [meta.py:__init__():53] meta init done
+2021-05-18 18:00:15,329 DEBUG   HandlerThread:23072 [meta.py:probe():210] probe
+2021-05-18 18:00:15,336 DEBUG   HandlerThread:23072 [meta.py:_setup_git():200] setup git
+2021-05-18 18:00:15,355 DEBUG   HandlerThread:23072 [meta.py:_setup_git():207] setup git done
+2021-05-18 18:00:15,355 DEBUG   HandlerThread:23072 [meta.py:_save_pip():57] save pip
+2021-05-18 18:00:15,356 DEBUG   HandlerThread:23072 [meta.py:_save_pip():71] save pip done
+2021-05-18 18:00:15,356 DEBUG   HandlerThread:23072 [meta.py:_save_conda():78] save conda
+2021-05-18 18:00:16,325 INFO    Thread-8  :23072 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_180014-3s6dz1rt/files/wandb-summary.json
+2021-05-18 18:00:16,325 INFO    Thread-8  :23072 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_180014-3s6dz1rt/files/conda-environment.yaml
+2021-05-18 18:00:16,325 INFO    Thread-8  :23072 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_180014-3s6dz1rt/files/requirements.txt
+2021-05-18 18:00:20,264 DEBUG   HandlerThread:23072 [meta.py:_save_conda():86] save conda done
+2021-05-18 18:00:20,264 DEBUG   HandlerThread:23072 [meta.py:probe():252] probe done
+2021-05-18 18:00:20,326 INFO    Thread-8  :23072 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_180014-3s6dz1rt/files/conda-environment.yaml
+2021-05-18 18:00:20,327 INFO    Thread-8  :23072 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_180014-3s6dz1rt/files/wandb-metadata.json
+2021-05-18 18:00:20,351 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 18:00:20,351 DEBUG   SenderThread:23072 [sender.py:send():176] send: files
+2021-05-18 18:00:20,351 INFO    SenderThread:23072 [sender.py:_save_file():821] saving file wandb-metadata.json with policy now
+2021-05-18 18:00:20,352 DEBUG   SenderThread:23072 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 18:00:20,964 INFO    Thread-11 :23072 [upload_job.py:push():133] Uploaded file /tmp/tmpbfd21d_5wandb/3gcbmxz0-wandb-metadata.json
+2021-05-18 18:00:21,327 INFO    Thread-8  :23072 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_180014-3s6dz1rt/files/output.log
+2021-05-18 18:00:23,034 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:00:23,035 DEBUG   SenderThread:23072 [sender.py:send():176] send: telemetry
+2021-05-18 18:00:23,035 DEBUG   SenderThread:23072 [sender.py:send():176] send: exit
+2021-05-18 18:00:23,035 INFO    SenderThread:23072 [sender.py:send_exit():281] handling exit code: 1
+2021-05-18 18:00:23,035 INFO    SenderThread:23072 [sender.py:send_exit():289] send defer
+2021-05-18 18:00:23,035 DEBUG   SenderThread:23072 [sender.py:send_request():186] send_request: poll_exit
+2021-05-18 18:00:23,036 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: defer
+2021-05-18 18:00:23,036 INFO    HandlerThread:23072 [handler.py:handle_request_defer():138] handle defer: 0
+2021-05-18 18:00:23,037 DEBUG   SenderThread:23072 [sender.py:send_request():186] send_request: defer
+2021-05-18 18:00:23,037 INFO    SenderThread:23072 [sender.py:send_request_defer():298] handle sender defer: 0
+2021-05-18 18:00:23,037 INFO    SenderThread:23072 [sender.py:send_request_defer():336] send defer: 1
+2021-05-18 18:00:23,037 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: defer
+2021-05-18 18:00:23,037 INFO    HandlerThread:23072 [handler.py:handle_request_defer():138] handle defer: 1
+2021-05-18 18:00:23,084 DEBUG   SenderThread:23072 [sender.py:send_request():186] send_request: defer
+2021-05-18 18:00:23,084 INFO    SenderThread:23072 [sender.py:send_request_defer():298] handle sender defer: 1
+2021-05-18 18:00:23,084 INFO    SenderThread:23072 [sender.py:send_request_defer():336] send defer: 2
+2021-05-18 18:00:23,085 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: defer
+2021-05-18 18:00:23,085 INFO    HandlerThread:23072 [handler.py:handle_request_defer():138] handle defer: 2
+2021-05-18 18:00:23,085 DEBUG   SenderThread:23072 [sender.py:send():176] send: stats
+2021-05-18 18:00:23,085 DEBUG   SenderThread:23072 [sender.py:send_request():186] send_request: defer
+2021-05-18 18:00:23,085 INFO    SenderThread:23072 [sender.py:send_request_defer():298] handle sender defer: 2
+2021-05-18 18:00:23,085 INFO    SenderThread:23072 [sender.py:send_request_defer():336] send defer: 3
+2021-05-18 18:00:23,086 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: defer
+2021-05-18 18:00:23,086 INFO    HandlerThread:23072 [handler.py:handle_request_defer():138] handle defer: 3
+2021-05-18 18:00:23,086 DEBUG   SenderThread:23072 [sender.py:send():176] send: summary
+2021-05-18 18:00:23,086 INFO    SenderThread:23072 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 18:00:23,086 DEBUG   SenderThread:23072 [sender.py:send_request():186] send_request: defer
+2021-05-18 18:00:23,086 INFO    SenderThread:23072 [sender.py:send_request_defer():298] handle sender defer: 3
+2021-05-18 18:00:23,087 INFO    SenderThread:23072 [sender.py:send_request_defer():336] send defer: 4
+2021-05-18 18:00:23,087 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: defer
+2021-05-18 18:00:23,087 INFO    HandlerThread:23072 [handler.py:handle_request_defer():138] handle defer: 4
+2021-05-18 18:00:23,087 DEBUG   SenderThread:23072 [sender.py:send_request():186] send_request: defer
+2021-05-18 18:00:23,087 INFO    SenderThread:23072 [sender.py:send_request_defer():298] handle sender defer: 4
+2021-05-18 18:00:23,138 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:00:23,209 ERROR   FileStreamThread:23072 [file_stream.py:_thread_except_body():286] generic exception in filestream thread
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/wandb/sdk/internal/file_stream.py", line 282, in _thread_except_body
+    self._thread_body()
+  File "/opt/conda/lib/python3.7/site-packages/wandb/sdk/internal/file_stream.py", line 260, in _thread_body
+    self._send(ready_chunks)
+  File "/opt/conda/lib/python3.7/site-packages/wandb/sdk/internal/file_stream.py", line 327, in _send
+    retry_callback=self._api.retry_callback,
+  File "/opt/conda/lib/python3.7/site-packages/wandb/sdk/internal/file_stream.py", line 295, in _handle_response
+    raise response
+  File "/opt/conda/lib/python3.7/site-packages/wandb/sdk/internal/file_stream.py", line 382, in request_with_retry
+    response.raise_for_status()
+  File "/opt/conda/lib/python3.7/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.wandb.ai/files/openingsound/stage_3_object_det/3s6dz1rt/file_stream
+2021-05-18 18:00:23,284 ERROR   SenderThread:23072 [internal_api.py:execute():130] 409 response executing GraphQL.
+2021-05-18 18:00:23,284 ERROR   SenderThread:23072 [internal_api.py:execute():131] {"errors":[{"message":"Error 1062: Duplicate entry '311811-3s6dz1rt' for key 'PRIMARY'","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2021-05-18 18:00:23,328 INFO    Thread-8  :23072 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_180014-3s6dz1rt/files/output.log
+2021-05-18 18:00:23,328 INFO    Thread-8  :23072 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_180014-3s6dz1rt/files/wandb-summary.json
+2021-05-18 18:00:24,631 ERROR   SenderThread:23072 [internal_api.py:execute():130] 409 response executing GraphQL.
+2021-05-18 18:00:24,631 ERROR   SenderThread:23072 [internal_api.py:execute():131] {"errors":[{"message":"Error 1062: Duplicate entry '311811-3s6dz1rt' for key 'PRIMARY'","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2021-05-18 18:00:26,992 ERROR   SenderThread:23072 [internal_api.py:execute():130] 409 response executing GraphQL.
+2021-05-18 18:00:26,992 ERROR   SenderThread:23072 [internal_api.py:execute():131] {"errors":[{"message":"Error 1062: Duplicate entry '311811-3s6dz1rt' for key 'PRIMARY'","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2021-05-18 18:00:26,992 ERROR   SenderThread:23072 [retry.py:__call__():126] Retry attempt failed:
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/wandb/sdk/lib/retry.py", line 102, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/wandb/sdk/internal/internal_api.py", line 133, in execute
+    six.reraise(*sys.exc_info())
+  File "/opt/conda/lib/python3.7/site-packages/six.py", line 703, in reraise
+    raise value
+  File "/opt/conda/lib/python3.7/site-packages/wandb/sdk/internal/internal_api.py", line 127, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/wandb/vendor/gql-0.2.0/gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/opt/conda/lib/python3.7/site-packages/wandb/vendor/gql-0.2.0/gql/transport/requests.py", line 39, in execute
+    request.raise_for_status()
+  File "/opt/conda/lib/python3.7/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 409 Client Error: Conflict for url: https://api.wandb.ai/graphql
+2021-05-18 18:00:28,239 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:00:31,898 ERROR   SenderThread:23072 [internal_api.py:execute():130] 409 response executing GraphQL.
+2021-05-18 18:00:31,898 ERROR   SenderThread:23072 [internal_api.py:execute():131] {"errors":[{"message":"Error 1062: Duplicate entry '311811-3s6dz1rt' for key 'PRIMARY'","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2021-05-18 18:00:33,340 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:00:38,440 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:00:41,683 ERROR   SenderThread:23072 [internal_api.py:execute():130] 409 response executing GraphQL.
+2021-05-18 18:00:41,684 ERROR   SenderThread:23072 [internal_api.py:execute():131] {"errors":[{"message":"Error 1062: Duplicate entry '311811-3s6dz1rt' for key 'PRIMARY'","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2021-05-18 18:00:43,543 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:00:48,643 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:00:53,745 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:00:57,914 ERROR   SenderThread:23072 [internal_api.py:execute():130] 409 response executing GraphQL.
+2021-05-18 18:00:57,915 ERROR   SenderThread:23072 [internal_api.py:execute():131] {"errors":[{"message":"Error 1062: Duplicate entry '311811-3s6dz1rt' for key 'PRIMARY'","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2021-05-18 18:00:58,847 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:01:03,949 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:01:09,050 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:01:14,153 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:01:19,254 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:01:24,356 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:01:29,457 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:01:32,444 ERROR   SenderThread:23072 [internal_api.py:execute():130] 409 response executing GraphQL.
+2021-05-18 18:01:32,445 ERROR   SenderThread:23072 [internal_api.py:execute():131] {"errors":[{"message":"Error 1062: Duplicate entry '311811-3s6dz1rt' for key 'PRIMARY'","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2021-05-18 18:01:34,558 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:01:39,658 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:01:44,760 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:01:49,862 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:01:54,963 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:02:00,066 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:02:05,167 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:02:10,269 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:02:15,371 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:02:20,472 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:02:25,574 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:02:30,676 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:02:35,778 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:02:37,828 ERROR   SenderThread:23072 [internal_api.py:execute():130] 409 response executing GraphQL.
+2021-05-18 18:02:37,828 ERROR   SenderThread:23072 [internal_api.py:execute():131] {"errors":[{"message":"Error 1062: Duplicate entry '311811-3s6dz1rt' for key 'PRIMARY'","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2021-05-18 18:02:40,880 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:02:45,982 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:02:51,083 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:02:56,185 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:03:01,286 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:03:06,388 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:03:11,489 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:03:16,590 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:03:21,692 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:03:26,794 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:03:31,895 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:03:36,996 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:03:42,098 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:03:47,199 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:03:52,301 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:03:57,402 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:04:02,504 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:04:07,606 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:04:12,709 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:04:17,810 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:04:22,912 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:04:28,014 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:04:33,116 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:04:38,218 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:04:43,319 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:04:48,420 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:04:53,522 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:04:58,622 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:05:03,723 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:05:08,826 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:05:09,375 ERROR   SenderThread:23072 [internal_api.py:execute():130] 409 response executing GraphQL.
+2021-05-18 18:05:09,375 ERROR   SenderThread:23072 [internal_api.py:execute():131] {"errors":[{"message":"Error 1062: Duplicate entry '311811-3s6dz1rt' for key 'PRIMARY'","path":["upsertBucket"]}],"data":{"upsertBucket":null}}
+2021-05-18 18:05:13,928 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:05:19,029 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:05:24,131 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:05:29,234 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:05:34,335 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:05:39,436 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:05:44,538 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:05:49,640 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:05:54,742 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:05:59,845 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit
+2021-05-18 18:06:04,947 DEBUG   HandlerThread:23072 [handler.py:handle_request():121] handle_request: poll_exit

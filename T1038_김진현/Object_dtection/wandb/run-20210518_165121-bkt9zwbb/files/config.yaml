@@ -1,0 +1,59 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.10.30
+    framework: torch
+    is_jupyter_run: true
+    is_kaggle_kernel: false
+    python_version: 3.7.7
+    t:
+      1:
+      - 1
+      - 5
+      4: 3.7.7
+      5: 0.10.30
+      8:
+      - 1
+      - 5
+batch_size:
+  desc: null
+  value: 3
+epoch:
+  desc: null
+  value: 60
+lr_config:
+  desc: null
+  value:
+    step:
+    - 27
+    - 33
+    type: StepLrUpdaterHook
+    warmup: linear
+    warmup_iters: 500
+    warmup_ratio: 0.001
+optimizer:
+  desc: null
+  value:
+    betas:
+    - 0.9
+    - 0.999
+    lr: 0.0001
+    paramwise_cfg:
+      custom_keys:
+        absolute_pos_embed:
+          decay_mult: 0.0
+        norm:
+          decay_mult: 0.0
+        relative_position_bias_table:
+          decay_mult: 0.0
+    type: AdamW
+    weight_decay: 0.05
+optimizer_config:
+  desc: null
+  value:
+    grad_clip:
+      max_norm: 35
+      norm_type: 2
+    type: OptimizerHook

@@ -1,0 +1,1 @@
+ValueError: Current iteration 63 exceeds cumulative_periods [15, 27, 39, 51, 63]

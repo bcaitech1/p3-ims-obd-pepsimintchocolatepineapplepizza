@@ -1,0 +1,64 @@
+2021-05-18 13:39:20,005 INFO    MainThread:29584 [internal.py:wandb_internal():91] W&B internal server running at pid: 29584, started at: 2021-05-18 13:39:20.004801
+2021-05-18 13:39:20,007 DEBUG   SenderThread:29584 [sender.py:send():176] send: header
+2021-05-18 13:39:20,007 INFO    WriterThread:29584 [datastore.py:open_for_write():77] open: /opt/ml/code/mmdetection_trash/wandb/run-20210518_133919-hl210eqz/run-hl210eqz.wandb
+2021-05-18 13:39:20,008 DEBUG   HandlerThread:29584 [handler.py:handle_request():121] handle_request: check_version
+2021-05-18 13:39:20,008 DEBUG   SenderThread:29584 [sender.py:send_request():186] send_request: check_version
+2021-05-18 13:39:20,174 DEBUG   SenderThread:29584 [sender.py:send():176] send: run
+2021-05-18 13:39:20,404 INFO    SenderThread:29584 [dir_watcher.py:__init__():168] watching files in: /opt/ml/code/mmdetection_trash/wandb/run-20210518_133919-hl210eqz/files
+2021-05-18 13:39:20,404 INFO    SenderThread:29584 [sender.py:_start_run_threads():699] run started: hl210eqz with start time 1621345159
+2021-05-18 13:39:20,404 DEBUG   HandlerThread:29584 [handler.py:handle_request():121] handle_request: run_start
+2021-05-18 13:39:20,404 DEBUG   SenderThread:29584 [sender.py:send():176] send: summary
+2021-05-18 13:39:20,407 DEBUG   HandlerThread:29584 [meta.py:__init__():39] meta init
+2021-05-18 13:39:20,407 DEBUG   HandlerThread:29584 [meta.py:__init__():53] meta init done
+2021-05-18 13:39:20,407 DEBUG   HandlerThread:29584 [meta.py:probe():210] probe
+2021-05-18 13:39:20,408 INFO    SenderThread:29584 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 13:39:20,414 DEBUG   HandlerThread:29584 [meta.py:_setup_git():200] setup git
+2021-05-18 13:39:20,429 DEBUG   HandlerThread:29584 [meta.py:_setup_git():207] setup git done
+2021-05-18 13:39:20,429 DEBUG   HandlerThread:29584 [meta.py:_save_pip():57] save pip
+2021-05-18 13:39:20,430 DEBUG   HandlerThread:29584 [meta.py:_save_pip():71] save pip done
+2021-05-18 13:39:20,430 DEBUG   HandlerThread:29584 [meta.py:_save_conda():78] save conda
+2021-05-18 13:39:21,405 INFO    Thread-8  :29584 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_133919-hl210eqz/files/wandb-summary.json
+2021-05-18 13:39:21,406 INFO    Thread-8  :29584 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_133919-hl210eqz/files/requirements.txt
+2021-05-18 13:39:21,406 INFO    Thread-8  :29584 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_133919-hl210eqz/files/conda-environment.yaml
+2021-05-18 13:39:25,339 DEBUG   HandlerThread:29584 [meta.py:_save_conda():86] save conda done
+2021-05-18 13:39:25,339 DEBUG   HandlerThread:29584 [meta.py:probe():252] probe done
+2021-05-18 13:39:25,407 INFO    Thread-8  :29584 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_133919-hl210eqz/files/conda-environment.yaml
+2021-05-18 13:39:25,407 INFO    Thread-8  :29584 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_133919-hl210eqz/files/wandb-metadata.json
+2021-05-18 13:39:25,420 DEBUG   SenderThread:29584 [sender.py:send():176] send: files
+2021-05-18 13:39:25,420 INFO    SenderThread:29584 [sender.py:_save_file():821] saving file wandb-metadata.json with policy now
+2021-05-18 13:39:25,420 DEBUG   HandlerThread:29584 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 13:39:25,421 DEBUG   SenderThread:29584 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 13:39:25,506 DEBUG   HandlerThread:29584 [handler.py:handle_request():121] handle_request: pause
+2021-05-18 13:39:25,506 INFO    HandlerThread:29584 [handler.py:handle_request_pause():519] stopping system metrics thread
+2021-05-18 13:39:25,605 DEBUG   SenderThread:29584 [sender.py:send():176] send: stats
+2021-05-18 13:39:26,030 INFO    Thread-11 :29584 [upload_job.py:push():133] Uploaded file /tmp/tmptex6poo2wandb/3bz5g15p-wandb-metadata.json
+2021-05-18 13:39:26,407 INFO    Thread-8  :29584 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_133919-hl210eqz/files/output.log
+2021-05-18 13:39:40,607 DEBUG   HandlerThread:29584 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 13:39:40,607 DEBUG   SenderThread:29584 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 13:39:55,796 DEBUG   HandlerThread:29584 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 13:39:55,796 DEBUG   SenderThread:29584 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 13:40:10,981 DEBUG   HandlerThread:29584 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 13:40:10,982 DEBUG   SenderThread:29584 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 13:40:26,169 DEBUG   HandlerThread:29584 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 13:40:26,169 DEBUG   SenderThread:29584 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 13:40:41,357 DEBUG   HandlerThread:29584 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 13:40:41,357 DEBUG   SenderThread:29584 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 13:40:56,557 DEBUG   HandlerThread:29584 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 13:40:56,558 DEBUG   SenderThread:29584 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 13:41:11,763 DEBUG   HandlerThread:29584 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 13:41:11,763 DEBUG   SenderThread:29584 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 13:41:26,951 DEBUG   HandlerThread:29584 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 13:41:26,952 DEBUG   SenderThread:29584 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 13:41:30,519 ERROR   FileStreamThread:29584 [file_stream.py:_thread_except_body():286] generic exception in filestream thread
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.7/site-packages/wandb/sdk/internal/file_stream.py", line 282, in _thread_except_body
+    self._thread_body()
+  File "/opt/conda/lib/python3.7/site-packages/wandb/sdk/internal/file_stream.py", line 269, in _thread_body
+    json={"complete": False, "failed": False},
+  File "/opt/conda/lib/python3.7/site-packages/wandb/sdk/internal/file_stream.py", line 295, in _handle_response
+    raise response
+  File "/opt/conda/lib/python3.7/site-packages/wandb/sdk/internal/file_stream.py", line 382, in request_with_retry
+    response.raise_for_status()
+  File "/opt/conda/lib/python3.7/site-packages/requests/models.py", line 941, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.wandb.ai/files/openingsound/stage_3_object_det/hl210eqz/file_stream

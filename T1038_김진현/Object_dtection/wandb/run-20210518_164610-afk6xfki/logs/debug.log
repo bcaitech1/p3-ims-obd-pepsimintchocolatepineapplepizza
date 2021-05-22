@@ -1,0 +1,25 @@
+2021-05-18 16:46:10,955 INFO    MainThread:3940 [wandb_setup.py:_flush():69] setting env: {}
+2021-05-18 16:46:10,955 INFO    MainThread:3940 [wandb_setup.py:_flush():69] setting login settings: {}
+2021-05-18 16:46:10,955 INFO    MainThread:3940 [wandb_init.py:_log_setup():336] Logging user logs to /opt/ml/code/mmdetection_trash/wandb/run-20210518_164610-afk6xfki/logs/debug.log
+2021-05-18 16:46:10,955 INFO    MainThread:3940 [wandb_init.py:_log_setup():337] Logging internal logs to /opt/ml/code/mmdetection_trash/wandb/run-20210518_164610-afk6xfki/logs/debug-internal.log
+2021-05-18 16:46:10,956 INFO    MainThread:3940 [wandb_init.py:_jupyter_setup():287] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7f22d2ec0b10>
+2021-05-18 16:46:10,956 INFO    MainThread:3940 [wandb_init.py:init():369] calling init triggers
+2021-05-18 16:46:10,956 INFO    MainThread:3940 [wandb_init.py:init():376] wandb.init called with sweep_config: {}
+config: {'epoch': 60, 'batch_size': 4, 'optimizer': {'type': 'AdamW', 'lr': 0.0001, 'betas': (0.9, 0.999), 'weight_decay': 0.05, 'paramwise_cfg': {'custom_keys': {'absolute_pos_embed': {'decay_mult': 0.0}, 'relative_position_bias_table': {'decay_mult': 0.0}, 'norm': {'decay_mult': 0.0}}}}, 'optimizer_config': {'grad_clip': {'max_norm': 35, 'norm_type': 2}, 'type': 'OptimizerHook'}, 'lr_config': {'warmup': 'linear', 'warmup_iters': 500, 'warmup_ratio': 0.001, 'step': [27, 33], 'type': 'StepLrUpdaterHook'}}
+2021-05-18 16:46:10,957 INFO    MainThread:3940 [wandb_init.py:init():418] starting backend
+2021-05-18 16:46:10,957 INFO    MainThread:3940 [backend.py:_multiprocessing_setup():72] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2021-05-18 16:46:11,012 INFO    MainThread:3940 [backend.py:ensure_launched():132] starting backend process...
+2021-05-18 16:46:11,068 INFO    MainThread:3940 [backend.py:ensure_launched():137] started backend process with pid: 14638
+2021-05-18 16:46:11,071 INFO    MainThread:3940 [wandb_init.py:init():423] backend started and connected
+2021-05-18 16:46:11,088 INFO    MainThread:3940 [wandb_init.py:init():465] updated telemetry
+2021-05-18 16:46:11,090 INFO    MainThread:3940 [wandb_init.py:init():484] communicating current version
+2021-05-18 16:46:11,950 INFO    MainThread:3940 [wandb_init.py:init():489] got version response 
+2021-05-18 16:46:11,951 INFO    MainThread:3940 [wandb_init.py:init():497] communicating run to backend with 30 second timeout
+2021-05-18 16:46:12,190 INFO    MainThread:3940 [wandb_init.py:init():522] starting run threads in backend
+2021-05-18 16:46:17,198 INFO    MainThread:3940 [wandb_run.py:_console_start():1565] atexit reg
+2021-05-18 16:46:17,198 INFO    MainThread:3940 [wandb_run.py:_redirect():1412] redirect: SettingsConsole.WRAP
+2021-05-18 16:46:17,198 INFO    MainThread:3940 [wandb_run.py:_redirect():1455] Wrapping output streams.
+2021-05-18 16:46:17,199 INFO    MainThread:3940 [wandb_run.py:_redirect():1479] Redirects installed.
+2021-05-18 16:46:17,199 INFO    MainThread:3940 [wandb_init.py:init():546] run started, returning control to user process
+2021-05-18 16:47:06,413 INFO    MainThread:3940 [wandb_init.py:_pause_backend():249] pausing backend
+2021-05-18 16:47:06,413 INFO    MainThread:3940 [jupyter.py:save_ipynb():265] not saving jupyter notebook

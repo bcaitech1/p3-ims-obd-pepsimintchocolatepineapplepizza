@@ -1,0 +1,1 @@
+{"train/loss_rpn_cls": 0.6957203567028045, "train/loss_rpn_bbox": 0.08427298665046692, "train/loss_cls": 1.1934381067752837, "train/acc": 74.212646484375, "train/loss_bbox": 0.07415607515722514, "train/loss": 2.047587513923645, "train/grad_norm": 16.96338768005371, "learning_rate": 1.4050000000000008e-05, "momentum": 0.9, "_runtime": 18, "_timestamp": 1621307715, "_step": 10}

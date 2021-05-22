@@ -1,0 +1,47 @@
+2021-05-18 02:18:22,408 INFO    MainThread:18272 [internal.py:wandb_internal():91] W&B internal server running at pid: 18272, started at: 2021-05-18 02:18:22.408493
+2021-05-18 02:18:22,412 DEBUG   SenderThread:18272 [sender.py:send():176] send: header
+2021-05-18 02:18:22,412 INFO    WriterThread:18272 [datastore.py:open_for_write():77] open: /opt/ml/code/mmdetection_trash/wandb/run-20210518_021821-13fk3bnx/run-13fk3bnx.wandb
+2021-05-18 02:18:22,413 DEBUG   HandlerThread:18272 [handler.py:handle_request():121] handle_request: check_version
+2021-05-18 02:18:22,413 DEBUG   SenderThread:18272 [sender.py:send_request():186] send_request: check_version
+2021-05-18 02:18:22,566 DEBUG   SenderThread:18272 [sender.py:send():176] send: run
+2021-05-18 02:18:22,800 DEBUG   HandlerThread:18272 [handler.py:handle_request():121] handle_request: run_start
+2021-05-18 02:18:22,804 DEBUG   HandlerThread:18272 [meta.py:__init__():39] meta init
+2021-05-18 02:18:22,804 DEBUG   HandlerThread:18272 [meta.py:__init__():53] meta init done
+2021-05-18 02:18:22,804 DEBUG   HandlerThread:18272 [meta.py:probe():210] probe
+2021-05-18 02:18:22,804 INFO    SenderThread:18272 [dir_watcher.py:__init__():168] watching files in: /opt/ml/code/mmdetection_trash/wandb/run-20210518_021821-13fk3bnx/files
+2021-05-18 02:18:22,804 INFO    SenderThread:18272 [sender.py:_start_run_threads():699] run started: 13fk3bnx with start time 1621304301
+2021-05-18 02:18:22,804 DEBUG   SenderThread:18272 [sender.py:send():176] send: summary
+2021-05-18 02:18:22,805 INFO    SenderThread:18272 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 02:18:22,811 DEBUG   HandlerThread:18272 [meta.py:_setup_git():200] setup git
+2021-05-18 02:18:22,827 DEBUG   HandlerThread:18272 [meta.py:_setup_git():207] setup git done
+2021-05-18 02:18:22,827 DEBUG   HandlerThread:18272 [meta.py:_save_pip():57] save pip
+2021-05-18 02:18:22,828 DEBUG   HandlerThread:18272 [meta.py:_save_pip():71] save pip done
+2021-05-18 02:18:22,828 DEBUG   HandlerThread:18272 [meta.py:_save_conda():78] save conda
+2021-05-18 02:18:23,807 INFO    Thread-9  :18272 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_021821-13fk3bnx/files/wandb-summary.json
+2021-05-18 02:18:23,807 INFO    Thread-9  :18272 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_021821-13fk3bnx/files/requirements.txt
+2021-05-18 02:18:23,807 INFO    Thread-9  :18272 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_021821-13fk3bnx/files/conda-environment.yaml
+2021-05-18 02:18:27,325 DEBUG   HandlerThread:18272 [meta.py:_save_conda():86] save conda done
+2021-05-18 02:18:27,326 DEBUG   HandlerThread:18272 [meta.py:probe():252] probe done
+2021-05-18 02:18:27,329 DEBUG   SenderThread:18272 [sender.py:send():176] send: files
+2021-05-18 02:18:27,329 INFO    SenderThread:18272 [sender.py:_save_file():821] saving file wandb-metadata.json with policy now
+2021-05-18 02:18:27,336 DEBUG   HandlerThread:18272 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 02:18:27,337 DEBUG   SenderThread:18272 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 02:18:27,807 INFO    Thread-9  :18272 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_021821-13fk3bnx/files/conda-environment.yaml
+2021-05-18 02:18:27,807 INFO    Thread-9  :18272 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_021821-13fk3bnx/files/output.log
+2021-05-18 02:18:27,808 INFO    Thread-9  :18272 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_021821-13fk3bnx/files/wandb-metadata.json
+2021-05-18 02:18:28,266 INFO    Thread-11 :18272 [upload_job.py:push():133] Uploaded file /tmp/tmpxvknbq6awandb/17z7xvau-wandb-metadata.json
+2021-05-18 02:18:30,808 DEBUG   HandlerThread:18272 [handler.py:handle_request():121] handle_request: pause
+2021-05-18 02:18:30,808 INFO    HandlerThread:18272 [handler.py:handle_request_pause():519] stopping system metrics thread
+2021-05-18 02:18:30,866 DEBUG   SenderThread:18272 [sender.py:send():176] send: stats
+2021-05-18 02:18:42,536 DEBUG   HandlerThread:18272 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 02:18:42,536 DEBUG   SenderThread:18272 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 02:18:57,722 DEBUG   HandlerThread:18272 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 02:18:57,723 DEBUG   SenderThread:18272 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 02:19:13,354 DEBUG   HandlerThread:18272 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 02:19:13,355 DEBUG   SenderThread:18272 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 02:19:28,557 DEBUG   HandlerThread:18272 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 02:19:28,558 DEBUG   SenderThread:18272 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 02:19:43,743 DEBUG   HandlerThread:18272 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 02:19:43,743 DEBUG   SenderThread:18272 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 02:19:58,951 DEBUG   HandlerThread:18272 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 02:19:58,952 DEBUG   SenderThread:18272 [sender.py:send_request():186] send_request: stop_status

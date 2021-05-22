@@ -1,0 +1,95 @@
+2021-05-18 18:10:46,007 INFO    MainThread:24012 [internal.py:wandb_internal():91] W&B internal server running at pid: 24012, started at: 2021-05-18 18:10:46.006877
+2021-05-18 18:10:46,010 DEBUG   SenderThread:24012 [sender.py:send():176] send: header
+2021-05-18 18:10:46,011 INFO    WriterThread:24012 [datastore.py:open_for_write():77] open: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/run-2s5qxiie.wandb
+2021-05-18 18:10:46,011 DEBUG   HandlerThread:24012 [handler.py:handle_request():121] handle_request: check_version
+2021-05-18 18:10:46,011 DEBUG   SenderThread:24012 [sender.py:send_request():186] send_request: check_version
+2021-05-18 18:10:46,154 DEBUG   SenderThread:24012 [sender.py:send():176] send: run
+2021-05-18 18:10:46,397 DEBUG   HandlerThread:24012 [handler.py:handle_request():121] handle_request: run_start
+2021-05-18 18:10:46,397 INFO    SenderThread:24012 [dir_watcher.py:__init__():168] watching files in: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files
+2021-05-18 18:10:46,398 INFO    SenderThread:24012 [sender.py:_start_run_threads():699] run started: 2s5qxiie with start time 1621361445
+2021-05-18 18:10:46,398 DEBUG   SenderThread:24012 [sender.py:send():176] send: summary
+2021-05-18 18:10:46,398 INFO    SenderThread:24012 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 18:10:46,402 DEBUG   HandlerThread:24012 [meta.py:__init__():39] meta init
+2021-05-18 18:10:46,402 DEBUG   HandlerThread:24012 [meta.py:__init__():53] meta init done
+2021-05-18 18:10:46,402 DEBUG   HandlerThread:24012 [meta.py:probe():210] probe
+2021-05-18 18:10:46,409 DEBUG   HandlerThread:24012 [meta.py:_setup_git():200] setup git
+2021-05-18 18:10:46,423 DEBUG   HandlerThread:24012 [meta.py:_setup_git():207] setup git done
+2021-05-18 18:10:46,423 DEBUG   HandlerThread:24012 [meta.py:_save_pip():57] save pip
+2021-05-18 18:10:46,424 DEBUG   HandlerThread:24012 [meta.py:_save_pip():71] save pip done
+2021-05-18 18:10:46,424 DEBUG   HandlerThread:24012 [meta.py:_save_conda():78] save conda
+2021-05-18 18:10:47,398 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/conda-environment.yaml
+2021-05-18 18:10:47,399 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/wandb-summary.json
+2021-05-18 18:10:47,399 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/requirements.txt
+2021-05-18 18:10:51,398 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/conda-environment.yaml
+2021-05-18 18:10:51,401 DEBUG   HandlerThread:24012 [meta.py:_save_conda():86] save conda done
+2021-05-18 18:10:51,401 DEBUG   HandlerThread:24012 [meta.py:probe():252] probe done
+2021-05-18 18:10:51,484 DEBUG   HandlerThread:24012 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 18:10:51,485 DEBUG   SenderThread:24012 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 18:10:51,664 DEBUG   SenderThread:24012 [sender.py:send():176] send: files
+2021-05-18 18:10:51,664 INFO    SenderThread:24012 [sender.py:_save_file():821] saving file wandb-metadata.json with policy now
+2021-05-18 18:10:52,277 INFO    Thread-11 :24012 [upload_job.py:push():133] Uploaded file /tmp/tmpstb5ii6ewandb/xbjnhtzc-wandb-metadata.json
+2021-05-18 18:10:52,399 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/wandb-metadata.json
+2021-05-18 18:10:52,399 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_created():216] file/dir created: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/output.log
+2021-05-18 18:11:06,666 DEBUG   HandlerThread:24012 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 18:11:06,666 DEBUG   SenderThread:24012 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 18:11:07,051 DEBUG   SenderThread:24012 [sender.py:send():176] send: history
+2021-05-18 18:11:07,051 DEBUG   SenderThread:24012 [sender.py:send():176] send: summary
+2021-05-18 18:11:07,053 INFO    SenderThread:24012 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 18:11:07,405 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/wandb-summary.json
+2021-05-18 18:11:14,547 DEBUG   SenderThread:24012 [sender.py:send():176] send: stats
+2021-05-18 18:11:20,415 DEBUG   SenderThread:24012 [sender.py:send():176] send: history
+2021-05-18 18:11:20,415 DEBUG   SenderThread:24012 [sender.py:send():176] send: summary
+2021-05-18 18:11:20,415 INFO    SenderThread:24012 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 18:11:21,415 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/wandb-summary.json
+2021-05-18 18:11:21,857 DEBUG   HandlerThread:24012 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 18:11:21,857 DEBUG   SenderThread:24012 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 18:11:34,052 DEBUG   SenderThread:24012 [sender.py:send():176] send: history
+2021-05-18 18:11:34,053 DEBUG   SenderThread:24012 [sender.py:send():176] send: summary
+2021-05-18 18:11:34,053 INFO    SenderThread:24012 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 18:11:34,421 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/wandb-summary.json
+2021-05-18 18:11:37,046 DEBUG   HandlerThread:24012 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 18:11:37,047 DEBUG   SenderThread:24012 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 18:11:44,687 DEBUG   SenderThread:24012 [sender.py:send():176] send: stats
+2021-05-18 18:11:48,795 DEBUG   SenderThread:24012 [sender.py:send():176] send: history
+2021-05-18 18:11:48,795 DEBUG   SenderThread:24012 [sender.py:send():176] send: summary
+2021-05-18 18:11:48,796 INFO    SenderThread:24012 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 18:11:49,427 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/wandb-summary.json
+2021-05-18 18:11:52,235 DEBUG   HandlerThread:24012 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 18:11:52,235 DEBUG   SenderThread:24012 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 18:12:03,857 DEBUG   SenderThread:24012 [sender.py:send():176] send: history
+2021-05-18 18:12:03,858 DEBUG   SenderThread:24012 [sender.py:send():176] send: summary
+2021-05-18 18:12:03,858 INFO    SenderThread:24012 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 18:12:04,432 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/wandb-summary.json
+2021-05-18 18:12:07,426 DEBUG   HandlerThread:24012 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 18:12:07,426 DEBUG   SenderThread:24012 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 18:12:14,807 DEBUG   SenderThread:24012 [sender.py:send():176] send: stats
+2021-05-18 18:12:19,123 DEBUG   SenderThread:24012 [sender.py:send():176] send: history
+2021-05-18 18:12:19,123 DEBUG   SenderThread:24012 [sender.py:send():176] send: summary
+2021-05-18 18:12:19,124 INFO    SenderThread:24012 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 18:12:19,439 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/wandb-summary.json
+2021-05-18 18:12:22,619 DEBUG   HandlerThread:24012 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 18:12:22,619 DEBUG   SenderThread:24012 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 18:12:34,176 DEBUG   SenderThread:24012 [sender.py:send():176] send: history
+2021-05-18 18:12:34,176 DEBUG   SenderThread:24012 [sender.py:send():176] send: summary
+2021-05-18 18:12:34,177 INFO    SenderThread:24012 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 18:12:34,444 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/wandb-summary.json
+2021-05-18 18:12:37,810 DEBUG   HandlerThread:24012 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 18:12:37,810 DEBUG   SenderThread:24012 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 18:12:44,936 DEBUG   SenderThread:24012 [sender.py:send():176] send: stats
+2021-05-18 18:12:49,314 DEBUG   SenderThread:24012 [sender.py:send():176] send: history
+2021-05-18 18:12:49,314 DEBUG   SenderThread:24012 [sender.py:send():176] send: summary
+2021-05-18 18:12:49,314 INFO    SenderThread:24012 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 18:12:49,450 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/wandb-summary.json
+2021-05-18 18:12:52,995 DEBUG   HandlerThread:24012 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 18:12:52,995 DEBUG   SenderThread:24012 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 18:13:04,673 DEBUG   SenderThread:24012 [sender.py:send():176] send: history
+2021-05-18 18:13:04,673 DEBUG   SenderThread:24012 [sender.py:send():176] send: summary
+2021-05-18 18:13:04,674 INFO    SenderThread:24012 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 18:13:05,456 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/wandb-summary.json
+2021-05-18 18:13:08,181 DEBUG   HandlerThread:24012 [handler.py:handle_request():121] handle_request: stop_status
+2021-05-18 18:13:08,182 DEBUG   SenderThread:24012 [sender.py:send_request():186] send_request: stop_status
+2021-05-18 18:13:15,081 DEBUG   SenderThread:24012 [sender.py:send():176] send: stats
+2021-05-18 18:13:20,711 DEBUG   SenderThread:24012 [sender.py:send():176] send: history
+2021-05-18 18:13:20,711 DEBUG   SenderThread:24012 [sender.py:send():176] send: summary
+2021-05-18 18:13:20,712 INFO    SenderThread:24012 [sender.py:_save_file():821] saving file wandb-summary.json with policy end
+2021-05-18 18:13:21,463 INFO    Thread-8  :24012 [dir_watcher.py:_on_file_modified():229] file/dir modified: /opt/ml/code/mmdetection_trash/wandb/run-20210518_181045-2s5qxiie/files/wandb-summary.json
